@@ -1,6 +1,7 @@
 
 
 import SwiftUI
+import AVFoundation
 
 struct Home: View {
     @State private var newList = SampleData.newList
@@ -8,6 +9,7 @@ struct Home: View {
     @State private var activity = SampleData.activity
     @State private var food = SampleData.food
     @EnvironmentObject private var notificationManager: NotificationManager
+    @ObservedObject private var audioPlayerViewModel = AudioPlayerViewModel()
     //View proprites
     @State private var currentlyDragging: CardContent?
     var body: some View {
@@ -207,7 +209,8 @@ struct Home: View {
     //New list View
     @ViewBuilder
     func NewListView()-> some View {
-       // NavigationStack {
+        // NavigationStack {
+        
         ZStack{
             Rectangle()
                 .accessibilityHint("A frame to drag cards into it") // to read it's cards
@@ -221,7 +224,7 @@ struct Home: View {
                 .foregroundColor(.beigCard).opacity(0.4)
                 .cornerRadius(13)
                 .padding(.trailing,460)
-            Image("plus")
+            Image("+")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .padding(.trailing,460)
@@ -229,25 +232,30 @@ struct Home: View {
             ScrollView(.horizontal){
                 CardsView(newList)
                     .padding(.leading,30)
-               
-                   
-            }
-                // MARK: - the sound Button START
-                Button{
-                    print("sound played")
-                }
-            label:{
-                ZStack{
-                    Circle()
-                        .frame(width: 80,height:80)
-                        .foregroundColor(.lavander)
-                    Image(systemName: "speaker.wave.2.fill")
-                        .resizable()
-                        .frame(width: 44,height:44)
-                        .foregroundColor(.beigCard)
-                }.offset(y:150)
-            }.accessibilityHint("Play the sound of the sentence")
-            }//End of zstack for the top cards
+                
+                
+            }}
+        // MARK: - the sound Button START
+        Button {
+           // speakLabelsOfNewListCards()
+            let labelsToPlay = newList.map { $0.Label }
+            // Set the current language code from the device's locale
+            audioPlayerViewModel.currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
+            audioPlayerViewModel.queueAudioFiles(with: labelsToPlay)
+            print("sound played")
+            
+        }
+    label:{
+        ZStack{
+            Circle()
+                .frame(width: 80,height:80)
+                .foregroundColor(.lavander)
+            Image(systemName: "speaker.wave.2.fill")
+                .resizable()
+                .frame(width: 44,height:44)
+                .foregroundColor(.beigCard)
+        }.offset(y:-60)
+    }.accessibilityHint("Play the sound of the sentence")
             // MARK: - the sound Button END
 
             .toolbar{
