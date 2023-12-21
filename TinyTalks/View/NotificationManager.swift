@@ -36,8 +36,7 @@ class NotificationManager: ObservableObject {
            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [restNotificationIdentifier])
        }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-
-         //displaying the ios local notification when app is in foreground
-         completionHandler([.alert, .badge, .sound])
-     }
+        // Displaying the iOS local notification when the app is in the foreground
+        completionHandler([.banner, .badge, .sound])
+    }
 }

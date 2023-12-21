@@ -159,17 +159,17 @@ struct Home: View {
             case .CommonUsed, .Activity, .Food:
                 if currentlyDragging.status == .NewList {
                     if currentlyDragging.constantProperty == "CommonUsedConstant" {
-                        var updatedCard = currentlyDragging
+                        let updatedCard = currentlyDragging
                         commonUsed.append(updatedCard)
                         newList.removeAll(where: {$0.id == currentlyDragging.id})
                     }
                     else if currentlyDragging.constantProperty == "ActivityConstant" {
-                        var updatedCard = currentlyDragging
+                        let updatedCard = currentlyDragging
                         activity.append(updatedCard)
                         newList.removeAll(where: {$0.id == currentlyDragging.id})
                     }
                     else if currentlyDragging.constantProperty == "FoodConstant" {
-                        var updatedCard = currentlyDragging
+                        let updatedCard = currentlyDragging
                         food.append(updatedCard)
                         newList.removeAll(where: {$0.id == currentlyDragging.id})
                     }
@@ -221,7 +221,7 @@ struct Home: View {
                 .foregroundColor(.beigCard).opacity(0.4)
                 .cornerRadius(13)
                 .padding(.trailing,460)
-            Image("+")
+            Image("plus")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .padding(.trailing,460)
