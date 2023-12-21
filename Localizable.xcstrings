@@ -11,17 +11,6 @@
         }
       }
     },
-    "Activities" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "أنشطة"
-          }
-        }
-      }
-    },
     "Activity" : {
       "localizations" : {
         "ar" : {
@@ -98,17 +87,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "شوكولاتة"
-          }
-        }
-      }
-    },
-    "Common use" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "الاستخدام الشائع"
           }
         }
       }
@@ -226,17 +204,6 @@
         }
       }
     },
-    "Hello, world!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "مرحبا، للعالم"
-          }
-        }
-      }
-    },
     "Hiking" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -336,7 +303,14 @@
       }
     },
     "sound played" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تشغيل الصوت"
+          }
+        }
+      }
     },
     "Swim" : {
       "extractionState" : "manual",
@@ -367,17 +341,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "أريد"
-          }
-        }
-      }
-    },
-    "xmark" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "علامة أكس"
           }
         }
       }

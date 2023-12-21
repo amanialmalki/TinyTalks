@@ -13,25 +13,25 @@ struct SampleData {
         .init(Image: "", Label: "", status: .NewList, constantProperty: "",imageLabel: "")
     ]
     static var commonUsed: [CardContent] = [
-        .init(Image: "figure.wave", Label: "I", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A person and hand up represent I"),
-        .init(Image: "lightbulb.min.fill", Label: "Want", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A lightbulb to represent an idea or a want"),
-        .init(Image: "hand.thumbsdown.fill", Label: "No", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A thumbs down hand to represent disapproval"),
-        .init(Image: "hand.thumbsup.fill", Label: "Yes", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A thumbs up hand to represent approval"),
-        .init(Image: "ear.fill", Label: "Listen", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "An ear to represent listening"),
-        .init(Image: "hand.raised.app", Label: "Need", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A raised hand to represent a need")
+        .init(Image: "I", Label: "I", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A person and hand up represent I"),
+        .init(Image: "Want", Label: "Want", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A lightbulb to represent an idea or a want"),
+        .init(Image: "No", Label: "No", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A thumbs down hand to represent disapproval"),
+        .init(Image: "Yes", Label: "Yes", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A thumbs up hand to represent approval"),
+        .init(Image: "Listen", Label: "Listen", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "An ear to represent listening"),
+        .init(Image: "Need", Label: "Need", status: .CommonUsed, constantProperty: "CommonUsedConstant", imageLabel: "A raised hand to represent a need")
     ]
     
     static var activity: [CardContent] = [
-        .init(Image: "figure.walk", Label: "Walk", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person walking"),
-        .init(Image: "figure.dance", Label: "Dance", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person dancing"),
-        .init(Image: "figure.play", Label: "Play", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person playing"),
-        .init(Image: "hand.draw.fill", Label: "Draw", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A hand drawing"),
-        .init(Image: "figure.basketball", Label: "Basketball", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person playing basketball"),
-        .init(Image: "figure.hiking", Label: "Hiking", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person hiking"),
-        .init(Image: "figure.jumprope", Label: "Jumprope", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person jumping rope"),
-        .init(Image: "figure.pool.swim", Label: "Swim", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person swimming"),
-        .init(Image: "figure.mind.and.body", Label: "Yoga", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person doing yoga"),
-        .init(Image: "figure.outdoor.cycle", Label: "Cycling", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person cycling")
+        .init(Image: "Walk", Label: "Walk", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person walking"),
+        .init(Image: "Dance", Label: "Dance", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person dancing"),
+        .init(Image: "Play", Label: "Play", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person playing"),
+        .init(Image: "Draw", Label: "Draw", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A hand drawing"),
+        .init(Image: "Basketball", Label: "Basketball", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person playing basketball"),
+        .init(Image: "Hiking", Label: "Hiking", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person hiking"),
+        /*.init(Image: "Jumprope", Label: "Jumprope", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person jumping rope")*/
+        .init(Image: "Swim", Label: "Swim", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person swimming"),
+        .init(Image: "Yoga", Label: "Yoga", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person doing yoga"),
+        .init(Image: "Cycling", Label: "Cycling", status: .Activity, constantProperty: "ActivityConstant", imageLabel: "A person cycling")
     ]
     
     static var food: [CardContent] = [

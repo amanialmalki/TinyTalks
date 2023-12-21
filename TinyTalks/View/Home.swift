@@ -65,23 +65,23 @@ struct Home: View {
             HStack {
                 Spacer() // Pushes content to center horizontally
                 VStack {
-                    if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
-                        Image(systemName: card.Image)
-                            .foregroundColor(Color("DarkBlue"))
-                            .font(.system(size: 90))
-                            .scaledToFit()
-                            .accessibilityLabel(card.imageLabel) // to read the label of image
-                            .accessibilityAddTraits(.isImage) // to make reader say image
-                            .accessibilityHint(card.Label) // ton read the word after the image
-                    } else {
+//                    if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
+//                        Image(systemName: card.Image)
+//                            .foregroundColor(Color("DarkBlue"))
+//                            .font(.system(size: 90))
+//                            .scaledToFit()
+//                            .accessibilityLabel(card.imageLabel) // to read the label of image
+//                            .accessibilityAddTraits(.isImage) // to make reader say image
+//                            .accessibilityHint(card.Label) // ton read the word after the image
+//                    } else {
                         Image(card.Image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 150, height: 150) // Set the frame size for the image
+                            .frame(width: 100, height: 100) // Set the frame size for the image
                             .accessibilityLabel(card.imageLabel) // to read the label of image
                             .accessibilityAddTraits(.isImage) // to make reader say image
                             .accessibilityHint(card.Label) // ton read the word after the image
-                    }
+                   // }
                     Text(NSLocalizedString(card.Label, comment: ""))
                         .accessibilityHidden(true) // to not repeate the word we add it above to come
                         .font(.system(size: 34))
@@ -99,15 +99,15 @@ struct Home: View {
         .contentShape(.dragPreview, .rect(cornerRadius: 10))
         .draggable(card.id.uuidString){
             VStack{
-                if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
-                    // Your code here
-                    Image(systemName: card.Image)
-                        .foregroundColor(Color("DarkBlue"))
-                        .font(.system(size: 90))
-                        .scaledToFit()
-                        .padding(.top)
-                        .accessibilityHidden(true) // to not repeate the word we add it above to come
-                } else {
+//                if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
+//                    // Your code here
+//                    Image(systemName: card.Image)
+//                        .foregroundColor(Color("DarkBlue"))
+//                        .font(.system(size: 90))
+//                        .scaledToFit()
+//                        .padding(.top)
+//                        .accessibilityHidden(true) // to not repeate the word we add it above to come
+//                } else {
                     // Your code here
                     Image(card.Image)
                         .resizable()
@@ -116,7 +116,7 @@ struct Home: View {
                         .padding(.top)
                         .accessibilityHidden(true) // to not repeate the word we add it above to come
                     Spacer()
-                }
+                //}
                 Text(NSLocalizedString(card.Label, comment: ""))
                     .accessibilityHidden(true) // to not repeate the word we add it above to come
                     .font(.system(size: 34))

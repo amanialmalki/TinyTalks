@@ -28,12 +28,12 @@ struct popUpView: View {
                             .font(.largeTitle)
                             .accessibilityLabel("Drag & Drop and let it speak out loud")
                     }
-                    Rectangle()
-                        .frame(width: 780,height: 820)
-                        .foregroundColor(.clear)
-                        .border(Color("lavander"), width: 4)
-                        .cornerRadius(13)
-                        .padding(.all)
+//                    Rectangle()
+//                        .frame(width: 780,height: 820)
+//                        .foregroundColor(.clear)
+//                        .border(Color("lavander"), width: 4)
+//                        .cornerRadius(13)
+//                        .padding(.all)
                     NavigationLink(destination: Home().navigationBarBackButtonHidden(false))  {
                        // HStack {
                         label:do {
@@ -41,10 +41,11 @@ struct popUpView: View {
                                 .foregroundColor(.lavander)
                                 .frame(width: 50, height: 50)
                                 .padding(.leading,650)
-                                .padding(.bottom,700)
+                                .padding(.bottom,1030)
   
                 }
-            }
+                    }
+                    .padding(.horizontal)
                     
                 }
                    
