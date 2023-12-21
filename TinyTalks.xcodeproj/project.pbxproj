@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22AD5BC02B32ECB4007ADD16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 22AD5BBF2B32ECB4007ADD16 /* Localizable.xcstrings */; };
+		680991B82B308AC8005E5615 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680991B72B308AC8005E5615 /* Home.swift */; };
+		681958E82B30C4B900256327 /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681958E72B30C4B900256327 /* CardContent.swift */; };
+		68BF94932B2F969A0038CA67 /* TinyTalksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BF94922B2F969A0038CA67 /* TinyTalksApp.swift */; };
+		68BF94952B2F969A0038CA67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BF94942B2F969A0038CA67 /* ContentView.swift */; };
+		68BF94972B2F969B0038CA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BF94962B2F969B0038CA67 /* Assets.xcassets */; };
+		68BF949B2B2F969B0038CA67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BF949A2B2F969B0038CA67 /* Preview Assets.xcassets */; };
+		9410A3822B331FA80025A798 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410A3812B331FA80025A798 /* SplashView.swift */; };
+		9410A3842B3325A50025A798 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410A3832B3325A50025A798 /* NotificationManager.swift */; };
+		9426B3B02B333DAC00BD7298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426B3AF2B333DAC00BD7298 /* AppDelegate.swift */; };
+		9426B3B22B334A1900BD7298 /* popUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9426B3B12B334A1900BD7298 /* popUpView.swift */; };
+		944028FE2B31F3BC00D8F318 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944028FD2B31F3BC00D8F318 /* SampleData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22AD5BBF2B32ECB4007ADD16 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		680991B72B308AC8005E5615 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		681958E72B30C4B900256327 /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
+		68BF948F2B2F969A0038CA67 /* TinyTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68BF94922B2F969A0038CA67 /* TinyTalksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyTalksApp.swift; sourceTree = "<group>"; };
+		68BF94942B2F969A0038CA67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68BF94962B2F969B0038CA67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68BF94982B2F969B0038CA67 /* TinyTalks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyTalks.entitlements; sourceTree = "<group>"; };
+		68BF949A2B2F969B0038CA67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9410A3812B331FA80025A798 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		9410A3832B3325A50025A798 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		9426B3AF2B333DAC00BD7298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9426B3B12B334A1900BD7298 /* popUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popUpView.swift; sourceTree = "<group>"; };
+		944028FD2B31F3BC00D8F318 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68BF948C2B2F969A0038CA67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		680991B32B308943005E5615 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9426B3AF2B333DAC00BD7298 /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		680991B42B308951005E5615 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9426B3B12B334A1900BD7298 /* popUpView.swift */,
+				680991B72B308AC8005E5615 /* Home.swift */,
+				9410A3812B331FA80025A798 /* SplashView.swift */,
+				9410A3832B3325A50025A798 /* NotificationManager.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		681958E42B30C46000256327 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				681958EB2B30C59100256327 /* Model */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		681958E52B30C47E00256327 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				681958EA2B30C58B00256327 /* Model */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		681958E62B30C48400256327 /* CommonUsed */ = {
+			isa = PBXGroup;
+			children = (
+				681958E92B30C58200256327 /* Model */,
+			);
+			path = CommonUsed;
+			sourceTree = "<group>";
+		};
+		681958E92B30C58200256327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		681958EA2B30C58B00256327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		681958EB2B30C59100256327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68BF94862B2F969A0038CA67 = {
+			isa = PBXGroup;
+			children = (
+				22AD5BBF2B32ECB4007ADD16 /* Localizable.xcstrings */,
+				68BF94912B2F969A0038CA67 /* TinyTalks */,
+				68BF94902B2F969A0038CA67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68BF94902B2F969A0038CA67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68BF948F2B2F969A0038CA67 /* TinyTalks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68BF94912B2F969A0038CA67 /* TinyTalks */ = {
+			isa = PBXGroup;
+			children = (
+				68C576D82B30C37500F86AFB /* Cards */,
+				680991B42B308951005E5615 /* View */,
+				680991B32B308943005E5615 /* Model */,
+				68BF94922B2F969A0038CA67 /* TinyTalksApp.swift */,
+				68BF94942B2F969A0038CA67 /* ContentView.swift */,
+				68BF94962B2F969B0038CA67 /* Assets.xcassets */,
+				68BF94982B2F969B0038CA67 /* TinyTalks.entitlements */,
+				68BF94992B2F969B0038CA67 /* Preview Content */,
+			);
+			path = TinyTalks;
+			sourceTree = "<group>";
+		};
+		68BF94992B2F969B0038CA67 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				68BF949A2B2F969B0038CA67 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		68C576D82B30C37500F86AFB /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				681958E72B30C4B900256327 /* CardContent.swift */,
+				944028FD2B31F3BC00D8F318 /* SampleData.swift */,
+				681958E62B30C48400256327 /* CommonUsed */,
+				681958E52B30C47E00256327 /* Activity */,
+				681958E42B30C46000256327 /* Food */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68BF948E2B2F969A0038CA67 /* TinyTalks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68BF949E2B2F969B0038CA67 /* Build configuration list for PBXNativeTarget "TinyTalks" */;
+			buildPhases = (
+				68BF948B2B2F969A0038CA67 /* Sources */,
+				68BF948C2B2F969A0038CA67 /* Frameworks */,
+				68BF948D2B2F969A0038CA67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyTalks;
+			productName = TinyTalks;
+			productReference = 68BF948F2B2F969A0038CA67 /* TinyTalks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68BF94872B2F969A0038CA67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					68BF948E2B2F969A0038CA67 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 68BF948A2B2F969A0038CA67 /* Build configuration list for PBXProject "TinyTalks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68BF94862B2F969A0038CA67;
+			productRefGroup = 68BF94902B2F969A0038CA67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68BF948E2B2F969A0038CA67 /* TinyTalks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68BF948D2B2F969A0038CA67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BF949B2B2F969B0038CA67 /* Preview Assets.xcassets in Resources */,
+				68BF94972B2F969B0038CA67 /* Assets.xcassets in Resources */,
+				22AD5BC02B32ECB4007ADD16 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68BF948B2B2F969A0038CA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9426B3B02B333DAC00BD7298 /* AppDelegate.swift in Sources */,
+				68BF94952B2F969A0038CA67 /* ContentView.swift in Sources */,
+				681958E82B30C4B900256327 /* CardContent.swift in Sources */,
+				680991B82B308AC8005E5615 /* Home.swift in Sources */,
+				9426B3B22B334A1900BD7298 /* popUpView.swift in Sources */,
+				944028FE2B31F3BC00D8F318 /* SampleData.swift in Sources */,
+				9410A3842B3325A50025A798 /* NotificationManager.swift in Sources */,
+				68BF94932B2F969A0038CA67 /* TinyTalksApp.swift in Sources */,
+				9410A3822B331FA80025A798 /* SplashView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		68BF949C2B2F969B0038CA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		68BF949D2B2F969B0038CA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		68BF949F2B2F969B0038CA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyTalks/TinyTalks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyTalks/Preview Content\"";
+				DEVELOPMENT_TEAM = H34956P8WF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amaniADA.TinyTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68BF94A02B2F969B0038CA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyTalks/TinyTalks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyTalks/Preview Content\"";
+				DEVELOPMENT_TEAM = H34956P8WF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amaniADA.TinyTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68BF948A2B2F969A0038CA67 /* Build configuration list for PBXProject "TinyTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68BF949C2B2F969B0038CA67 /* Debug */,
+				68BF949D2B2F969B0038CA67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68BF949E2B2F969B0038CA67 /* Build configuration list for PBXNativeTarget "TinyTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68BF949F2B2F969B0038CA67 /* Debug */,
+				68BF94A02B2F969B0038CA67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68BF94872B2F969A0038CA67 /* Project object */;
+}
