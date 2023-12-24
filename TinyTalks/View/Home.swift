@@ -8,6 +8,7 @@ struct Home: View {
     @State private var commonUsed = SampleData.commonUsed
     @State private var activity = SampleData.activity
     @State private var food = SampleData.food
+    @State private var isPresentingPopUpSheet = false
     @EnvironmentObject private var notificationManager: NotificationManager
     @ObservedObject private var audioPlayerViewModel = AudioPlayerViewModel()
     //View proprites
@@ -258,22 +259,22 @@ struct Home: View {
     }.accessibilityHint("Play the sound of the sentence")
             // MARK: - the sound Button END
 
-            .toolbar{
-                
-                ToolbarItem(placement: .navigationBarTrailing){
-                    NavigationLink(destination: popUpView().navigationBarBackButtonHidden(false))  {
+        // Button to show popUpView as a sheet
+                    Button(action: {
+                        isPresentingPopUpSheet.toggle()
+                    }) {
                         HStack {
-                        label:do {
-                            Image(systemName: "questionmark.circle").resizable()
+                            Image(systemName: "questionmark.circle")
+                                .resizable()
                                 .foregroundColor(.lavander)
                                 .frame(width: 40, height: 40)
                                 .padding(.leading)
-                            
                         }
-                        } .accessibilityHint("Button for description how to use the app")
+                        .accessibilityHint("Button for description how to use the app")
                     }
-                }
-            }
+                    .sheet(isPresented: $isPresentingPopUpSheet) {
+                        popUpView()
+                    }
        // }/*.navigationTitle("New List")*/
                 .dropDestination(for: String.self) { items, location in
                     //Appending to the last of Current List, if the item is not present on that list
