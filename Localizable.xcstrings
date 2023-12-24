@@ -33,6 +33,17 @@
         }
       }
     },
+    "before" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قبل"
+          }
+        }
+      }
+    },
     "although" : {
       "extractionState" : "manual",
       "localizations" : {

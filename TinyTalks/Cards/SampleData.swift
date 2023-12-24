@@ -53,6 +53,7 @@ struct SampleData {
         .init(Image: " ", Label: "though", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"though word"),
         .init(Image: " ", Label: "unless", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"unless word"),
         .init(Image: " ", Label: "after", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"after word"),
+        .init(Image: " ", Label: "before", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"before word"),
         .init(Image: " ", Label: "until", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"until word"),
         .init(Image: " ", Label: "once", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"Once word"),
         .init(Image: " ", Label: "whenever", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"whenever word"),
