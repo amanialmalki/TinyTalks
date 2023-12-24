@@ -66,15 +66,7 @@ struct Home: View {
             HStack {
                 Spacer() // Pushes content to center horizontally
                 VStack {
-//                    if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
-//                        Image(systemName: card.Image)
-//                            .foregroundColor(Color("DarkBlue"))
-//                            .font(.system(size: 90))
-//                            .scaledToFit()
-//                            .accessibilityLabel(card.imageLabel) // to read the label of image
-//                            .accessibilityAddTraits(.isImage) // to make reader say image
-//                            .accessibilityHint(card.Label) // ton read the word after the image
-//                    } else {
+
                         Image(card.Image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -100,16 +92,7 @@ struct Home: View {
         .contentShape(.dragPreview, .rect(cornerRadius: 10))
         .draggable(card.id.uuidString){
             VStack{
-//                if card.constantProperty == "CommonUsedConstant" || card.constantProperty == "ActivityConstant" {
-//                    // Your code here
-//                    Image(systemName: card.Image)
-//                        .foregroundColor(Color("DarkBlue"))
-//                        .font(.system(size: 90))
-//                        .scaledToFit()
-//                        .padding(.top)
-//                        .accessibilityHidden(true) // to not repeate the word we add it above to come
-//                } else {
-                    // Your code here
+
                     Image(card.Image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -210,8 +193,6 @@ struct Home: View {
     //New list View
     @ViewBuilder
     func NewListView()-> some View {
-        // NavigationStack {
-        
         ZStack{
                
                Rectangle()
@@ -260,26 +241,27 @@ struct Home: View {
             // MARK: - the sound Button END
 
         // Button to show popUpView as a sheet
-                    Button(action: {
-                        isPresentingPopUpSheet.toggle()
-                    }) {
-                        HStack {
-                            Image(systemName: "questionmark.circle")
-                                .resizable()
-                                .foregroundColor(.lavander)
-                                .frame(width: 40, height: 40)
-                                .padding(.leading)
-                        }
-                        .accessibilityHint("Button for description how to use the app")
+            .toolbar{
+                Button(action: {
+                    isPresentingPopUpSheet.toggle()
+                }) {
+                    HStack {
+                        Image(systemName: "questionmark.circle")
+                            .resizable()
+                            .foregroundColor(.lavander)
+                            .frame(width: 40, height: 40)
+                            .padding(.leading)
                     }
-                    .sheet(isPresented: $isPresentingPopUpSheet) {
-                        popUpView()
-                    }
+                    .accessibilityHint("Button for description how to use the app")
+                }
+                .sheet(isPresented: $isPresentingPopUpSheet) {
+                    popUpView()
+                }
+            }
        // }/*.navigationTitle("New List")*/
                 .dropDestination(for: String.self) { items, location in
                     //Appending to the last of Current List, if the item is not present on that list
                     withAnimation(.snappy) {
-                        //appendCard(.Food)
                     }
                     return true
                 } isTargeted: { _ in
@@ -311,8 +293,7 @@ struct Home: View {
                 } isTargeted: { _ in
                     
                 }
-                }//.padding(.all)
-        //.padding([.leading, .trailing, .top])
+                }
             
   
     }
@@ -339,8 +320,7 @@ struct Home: View {
                     } isTargeted: { _ in
                         
                     }
-            }//.padding(.all)
-        //.padding([.leading, .trailing, .top])
+            }
     }
     //Food View
     @ViewBuilder
@@ -366,7 +346,7 @@ struct Home: View {
                         
             }
     }
-        //.padding([.leading, .trailing, .top])
+     
     }
 
 }

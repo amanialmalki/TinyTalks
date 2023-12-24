@@ -28,24 +28,7 @@ struct popUpView: View {
                             .font(.largeTitle)
                             .accessibilityLabel("Drag & Drop and let it speak out loud")
                     }
-//                    Rectangle()
-//                        .frame(width: 780,height: 820)
-//                        .foregroundColor(.clear)
-//                        .border(Color("lavander"), width: 4)
-//                        .cornerRadius(13)
-//                        .padding(.all)
-                    NavigationLink(destination: Home().navigationBarBackButtonHidden(false))  {
-                       // HStack {
-                        label:do {
-                            Image(systemName: "xmark").resizable()
-                                .foregroundColor(.lavander)
-                                .frame(width: 50, height: 50)
-                                .padding(.leading,650)
-                                .padding(.bottom,1030)
-  
-                }
-                    }
-                    .padding(.horizontal)
+
                     
                 }
                    
@@ -61,4 +44,3 @@ struct popUpView: View {
 #Preview {
     popUpView()
 }
-//sheetShowing: .constant(true)
