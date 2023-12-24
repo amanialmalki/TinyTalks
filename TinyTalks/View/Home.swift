@@ -215,30 +215,34 @@ struct Home: View {
     //New list View
     @ViewBuilder
     func NewListView()-> some View {
-        ZStack{
-               
+        let rectangleHeight: CGFloat = 300
+           let rectangleWidth: CGFloat = UIScreen.main.bounds.width - 20 // 10 points of padding on each side
+
+           ZStack {
+               // Background rectangle
                Rectangle()
-                   .frame(height: 300)
-                   .frame(maxWidth: .infinity)
-                   .foregroundColor(.darkBlue)
+                   .frame(width: rectangleWidth, height: rectangleHeight)
+                   .foregroundColor(Color.darkBlue) // Use the Color initializer with the name of your color
                    .cornerRadius(13)
-                   .padding(.all)
-            ZStack{
-                ScrollView(.horizontal, showsIndicators: false) {
-                    CardsView(newList)
-                        .padding(.all)
-                }
-                .frame(width: UIScreen.main.bounds.width) // Constrain width
-                .frame(height: 300)
-                .frame(maxWidth: .infinity)
-                .clipped()
-            }
-                        Rectangle()
-                            .frame(width: 200,height: 200)
-                            .foregroundColor(.clear).opacity(0.4)
-                            .cornerRadius(13)
-                            .padding(.trailing,460)
-        }
+                   .padding(.all, 10)
+
+               // ScrollView for the cards
+               ScrollView(.horizontal, showsIndicators: false) {
+                   HStack(spacing: 20) {
+                           CardsView(newList)
+                           .padding(.all)
+                   }
+                   .padding(.horizontal, 10) // This padding should match the outer padding
+               }
+               .frame(width: rectangleWidth, height: rectangleHeight)
+               .clipped()
+               Rectangle()
+                   .frame(width: 200, height: 200)
+                   .foregroundColor(.clear)
+                   .opacity(0.4)
+                   .cornerRadius(13)
+                   .padding(.trailing, 460)
+           }
         // MARK: - the sound Button START
         Button {
            // speakLabelsOfNewListCards()
