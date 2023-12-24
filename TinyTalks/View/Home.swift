@@ -8,6 +8,7 @@ struct Home: View {
     @State private var commonUsed = SampleData.commonUsed
     @State private var activity = SampleData.activity
     @State private var food = SampleData.food
+    @State private var ConjunctionWords = SampleData.ConjunctionWords
     @State private var isPresentingPopUpSheet = false
     @EnvironmentObject private var notificationManager: NotificationManager
     @ObservedObject private var audioPlayerViewModel = AudioPlayerViewModel()
@@ -29,6 +30,7 @@ struct Home: View {
                             CommonUsedView()
                             ActivityView()
                             FoodView()
+                            ConjunctionWordsView()
                         }
                         
                     }
@@ -75,10 +77,21 @@ struct Home: View {
                             .accessibilityAddTraits(.isImage) // to make reader say image
                             .accessibilityHint(card.Label) // ton read the word after the image
                    // }
-                    Text(NSLocalizedString(card.Label, comment: ""))
-                        .accessibilityHidden(true) // to not repeate the word we add it above to come
-                        .font(.system(size: 34))
-                        .padding(.bottom)
+                    if card.constantProperty == "ConjunctionWordsConstant" {
+                        VStack {
+                             Text(NSLocalizedString(card.Label, comment: ""))
+                                 .accessibilityHidden(true)
+                                 .font(.system(size: 34))
+                                 .padding(.bottom)
+                                 .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity, alignment: .center)
+                         }
+                    } else{
+                        Text(NSLocalizedString(card.Label, comment: ""))
+                            .accessibilityHidden(true) // to not repeate the word we add it above to come
+                            .font(.system(size: 34))
+                            .padding(.bottom)
+                    }
+                   
                 }
                 Spacer() // Pushes content to center horizontally
                 
@@ -131,6 +144,8 @@ struct Home: View {
                         replaceItem(cards: &food, droppingCard: card, status: .Food)
                     case.NewList:
                         replaceItem(cards: &newList, droppingCard: card, status: .NewList)
+                    case .ConjunctionWords:
+                        replaceItem(cards: &ConjunctionWords, droppingCard: card, status: .ConjunctionWords)
 
                     }
                 }
@@ -142,7 +157,7 @@ struct Home: View {
     func appendCard(_ status: Status) {
         if let currentlyDragging {
             switch status {
-            case .CommonUsed, .Activity, .Food:
+            case .CommonUsed, .Activity, .Food,.ConjunctionWords:
                 if currentlyDragging.status == .NewList {
                     if currentlyDragging.constantProperty == "CommonUsedConstant" {
                         let updatedCard = currentlyDragging
@@ -159,6 +174,12 @@ struct Home: View {
                         food.append(updatedCard)
                         newList.removeAll(where: {$0.id == currentlyDragging.id})
                     }
+                    else if currentlyDragging.constantProperty == "ConjunctionWordsConstant" {
+                        let updatedCard = currentlyDragging
+                        ConjunctionWords.append(updatedCard)
+                        newList.removeAll(where: {$0.id == currentlyDragging.id})
+                    }
+                    
 
                 }
                 
@@ -174,6 +195,7 @@ struct Home: View {
                commonUsed.removeAll(where: {$0.id == currentlyDragging.id})
                activity.removeAll(where: {$0.id == currentlyDragging.id})
                food.removeAll(where: {$0.id == currentlyDragging.id})
+               ConjunctionWords.removeAll(where: {$0.id == currentlyDragging.id})
                 }
             }
         }
@@ -347,6 +369,33 @@ struct Home: View {
             }
     }
      
+    }
+    //ConjunctionWords View
+    @ViewBuilder
+    func ConjunctionWordsView()-> some View {
+            VStack{
+            Text("Conjunction Words")
+                    .fontWeight(.bold)
+                    .font(.system(size: 42))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.leading, .trailing])
+                    .accessibilityAddTraits(.isHeader) // to say hearer after the title
+                    .accessibilityHint("cards consist of an image and a word") // to read it's cards
+        ScrollView(.horizontal, showsIndicators: false) {
+                    CardsView(ConjunctionWords)
+            
+                }
+                    .dropDestination(for: String.self) { items, location in
+                        //Appending to the last of Current List, if the item is not present on that list
+                        withAnimation(.snappy) {
+                            appendCard(.ConjunctionWords)
+                        }
+                        return true
+                    } isTargeted: { _ in
+                        
+            }
+    }
+        //.padding([.leading, .trailing, .top])
     }
 
 }

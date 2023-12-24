@@ -43,4 +43,22 @@ struct SampleData {
         .init(Image: "Egg", Label: "Egg toast", status: .Food, constantProperty: "FoodConstant", imageLabel:"Egg toast"),
         .init(Image: "icecream", Label: "Ice Cream", status: .Food, constantProperty: "FoodConstant", imageLabel:"Ice Cream")
     ]
+    static var ConjunctionWords: [CardContent] = [
+        .init(Image: " ", Label: "or", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel: "or word"),
+        .init(Image: " ", Label: "but", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"but word"),
+        .init(Image: " ", Label: "and", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel: "and word"),
+        .init(Image: " ", Label: "yet", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"yet word"),
+        .init(Image: " ", Label: "if", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"if word"),
+        .init(Image: " ", Label: "although", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"although word"),
+        .init(Image: " ", Label: "though", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"though word"),
+        .init(Image: " ", Label: "unless", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"unless word"),
+        .init(Image: " ", Label: "after", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"after word"),
+        .init(Image: " ", Label: "until", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"until word"),
+        .init(Image: " ", Label: "once", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"Once word"),
+        .init(Image: " ", Label: "whenever", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"whenever word"),
+        .init(Image: " ", Label: "while", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"while word"),
+        .init(Image: " ", Label: "in case", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"in case word"),
+        .init(Image: " ", Label: "as", status: .ConjunctionWords, constantProperty: "ConjunctionWordsConstant", imageLabel:"as word")
+
+    ]
 }

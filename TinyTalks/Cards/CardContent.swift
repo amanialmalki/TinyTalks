@@ -29,5 +29,6 @@ enum Status {
     case Activity
     case Food
     case NewList
+    case ConjunctionWords
 }
 

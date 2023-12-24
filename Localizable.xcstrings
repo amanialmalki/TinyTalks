@@ -22,6 +22,39 @@
         }
       }
     },
+    "after" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بعد"
+          }
+        }
+      }
+    },
+    "although" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " على الرغم من"
+          }
+        }
+      }
+    },
+    "and" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "و"
+          }
+        }
+      }
+    },
     "apple" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -35,6 +68,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "apple"
+          }
+        }
+      }
+    },
+    "as" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " كما"
           }
         }
       }
@@ -57,6 +101,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "كرة سلة"
+          }
+        }
+      }
+    },
+    "before" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قبل"
+          }
+        }
+      }
+    },
+    "but" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لكن"
           }
         }
       }
@@ -98,6 +164,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "الأكثر استخدامًا"
+          }
+        }
+      }
+    },
+    "Conjunction Words" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمات الوصل"
           }
         }
       }
@@ -238,6 +314,28 @@
         }
       }
     },
+    "if" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا"
+          }
+        }
+      }
+    },
+    "in case" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في حال"
+          }
+        }
+      }
+    },
     "Jumprope" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -278,6 +376,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "لا"
+          }
+        }
+      }
+    },
+    "once" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " مرّة"
+          }
+        }
+      }
+    },
+    "or" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أو"
           }
         }
       }
@@ -324,6 +444,39 @@
         }
       }
     },
+    "though" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رغم أن"
+          }
+        }
+      }
+    },
+    "unless" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ما لم"
+          }
+        }
+      }
+    },
+    "until" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حتى"
+          }
+        }
+      }
+    },
     "Walk" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -346,6 +499,39 @@
         }
       }
     },
+    "whenever" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " كلما"
+          }
+        }
+      }
+    },
+    "wherever" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " كلما"
+          }
+        }
+      }
+    },
+    "while" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " بينما"
+          }
+        }
+      }
+    },
     "Yes" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -353,6 +539,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "نعم"
+          }
+        }
+      }
+    },
+    "yet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ومع ذلك"
           }
         }
       }
