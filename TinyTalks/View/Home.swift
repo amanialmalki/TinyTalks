@@ -24,7 +24,7 @@ struct Home: View {
                     // ScrollView for the rest of the content
                     ScrollView(.vertical) {
                         VStack {
-                            Spacer(minLength: 50) // Space for the NewListView
+                           // Spacer(minLength: 50) // Space for the NewListView
                             CommonUsedView()
                             ActivityView()
                             FoodView()
@@ -214,27 +214,30 @@ struct Home: View {
         ZStack{
             Rectangle()
                 .accessibilityHint("A frame to drag cards into it") // to read it's cards
-                .frame(height:300)
+                .frame(height: 300)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(.darkBlue)
+                .foregroundColor(.darkBlue) // Changed for simplicity, replace with your color
                 .cornerRadius(13)
                 .padding(.all)
-            Rectangle()
-                .frame(width: 200,height: 200)
-                .foregroundColor(.beigCard).opacity(0.4)
-                .cornerRadius(13)
-                .padding(.trailing,460)
-            Image("+")
-                .resizable()
-                .frame(width: 200, height: 200)
-                .padding(.trailing,460)
-                .opacity(0.8)
-            ScrollView(.horizontal){
-                CardsView(newList)
-                    .padding(.leading,30)
-                
-                
-            }}
+            ScrollView(.horizontal, showsIndicators: false) {
+                       CardsView(newList) // Assuming CardsView is properly defined to handle a list of Card items.
+                           .padding(.horizontal, 30)
+                   }
+                   .frame(height: 300) // Match the height of the ScrollView to the Rectangle
+                   .cornerRadius(13) // Match the corner radius if needed
+                   .clipped() // Ensure the ScrollView does not extend beyond the edges of the rectangle
+               
+            //            Rectangle()
+            //                .frame(width: 200,height: 200)
+            //                .foregroundColor(.beigCard).opacity(0.4)
+            //                .cornerRadius(13)
+            //                .padding(.trailing,460)
+            //            Image("+")
+            //                .resizable()
+            //                .frame(width: 200, height: 200)
+            //                .padding(.trailing,460)
+            //                .opacity(0.8)
+        }
         // MARK: - the sound Button START
         Button {
            // speakLabelsOfNewListCards()
@@ -310,7 +313,8 @@ struct Home: View {
                 } isTargeted: { _ in
                     
                 }
-            }.padding([.leading, .trailing, .top])
+                }.padding(.all)
+        //.padding([.leading, .trailing, .top])
             
   
     }
@@ -337,7 +341,8 @@ struct Home: View {
                     } isTargeted: { _ in
                         
                     }
-            }.padding([.leading, .trailing, .top])
+            }.padding(.all)
+        //.padding([.leading, .trailing, .top])
     }
     //Food View
     @ViewBuilder
@@ -362,7 +367,8 @@ struct Home: View {
                     } isTargeted: { _ in
                         
             }
-    }.padding([.leading, .trailing, .top])
+    }.padding(.all)
+        //.padding([.leading, .trailing, .top])
     }
 
 }
