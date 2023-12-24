@@ -227,16 +227,16 @@ struct Home: View {
                    .cornerRadius(13) // Match the corner radius if needed
                    .clipped() // Ensure the ScrollView does not extend beyond the edges of the rectangle
                
-            //            Rectangle()
-            //                .frame(width: 200,height: 200)
-            //                .foregroundColor(.beigCard).opacity(0.4)
-            //                .cornerRadius(13)
-            //                .padding(.trailing,460)
-            //            Image("+")
-            //                .resizable()
-            //                .frame(width: 200, height: 200)
-            //                .padding(.trailing,460)
-            //                .opacity(0.8)
+                        Rectangle()
+                            .frame(width: 200,height: 200)
+                            .foregroundColor(.clear).opacity(0.4)
+                            .cornerRadius(13)
+                            .padding(.trailing,460)
+//                        Image("+")
+//                            .resizable()
+//                            .frame(width: 200, height: 200)
+//                            .padding(.trailing,460)
+//                            .opacity(0.8)
         }
         // MARK: - the sound Button START
         Button {
@@ -313,7 +313,7 @@ struct Home: View {
                 } isTargeted: { _ in
                     
                 }
-                }.padding(.all)
+                }//.padding(.all)
         //.padding([.leading, .trailing, .top])
             
   
@@ -341,7 +341,7 @@ struct Home: View {
                     } isTargeted: { _ in
                         
                     }
-            }.padding(.all)
+            }//.padding(.all)
         //.padding([.leading, .trailing, .top])
     }
     //Food View
@@ -367,7 +367,7 @@ struct Home: View {
                     } isTargeted: { _ in
                         
             }
-    }.padding(.all)
+    }
         //.padding([.leading, .trailing, .top])
     }
 
