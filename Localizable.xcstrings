@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "A frame to drag cards into it" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

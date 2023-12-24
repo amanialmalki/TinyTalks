@@ -212,31 +212,28 @@ struct Home: View {
         // NavigationStack {
         
         ZStack{
-            Rectangle()
-                .accessibilityHint("A frame to drag cards into it") // to read it's cards
+               
+               Rectangle()
+                   .frame(height: 300)
+                   .frame(maxWidth: .infinity)
+                   .foregroundColor(.darkBlue)
+                   .cornerRadius(13)
+                   .padding(.all)
+            ZStack{
+                ScrollView(.horizontal, showsIndicators: false) {
+                    CardsView(newList)
+                        .padding(.all)
+                }
+                .frame(width: UIScreen.main.bounds.width) // Constrain width
                 .frame(height: 300)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(.darkBlue) // Changed for simplicity, replace with your color
-                .cornerRadius(13)
-                .padding(.all)
-            ScrollView(.horizontal, showsIndicators: false) {
-                       CardsView(newList) // Assuming CardsView is properly defined to handle a list of Card items.
-                           .padding(.horizontal, 30)
-                   }
-                   .frame(height: 300) // Match the height of the ScrollView to the Rectangle
-                   .cornerRadius(13) // Match the corner radius if needed
-                   .clipped() // Ensure the ScrollView does not extend beyond the edges of the rectangle
-               
+                .clipped()
+            }
                         Rectangle()
                             .frame(width: 200,height: 200)
                             .foregroundColor(.clear).opacity(0.4)
                             .cornerRadius(13)
                             .padding(.trailing,460)
-//                        Image("+")
-//                            .resizable()
-//                            .frame(width: 200, height: 200)
-//                            .padding(.trailing,460)
-//                            .opacity(0.8)
         }
         // MARK: - the sound Button START
         Button {
