@@ -33,17 +33,6 @@
         }
       }
     },
-    "before" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "قبل"
-          }
-        }
-      }
-    },
     "although" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -455,6 +444,17 @@
         }
       }
     },
+    "Take a Break" : {
+      "comment" : " ",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خذ قسطًا من الراحة"
+          }
+        }
+      }
+    },
     "though" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -572,6 +572,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "يوقا"
+          }
+        }
+      }
+    },
+    "You've been using the app for a while. Time to rest your eyes and stretch your legs." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لقد استخدمت التطبيق لمدة طويلة، أرح عينيك وتمدد."
           }
         }
       }

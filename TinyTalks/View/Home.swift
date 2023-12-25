@@ -25,7 +25,7 @@ struct Home: View {
                         .zIndex(1) // Make sure the NewListView is above the ScrollView
                     // ScrollView for the rest of the content
                     ScrollView(.vertical) {
-                        VStack {
+                        VStack (spacing:60){
                             CommonUsedView()
                             ActivityView()
                             FoodView()
