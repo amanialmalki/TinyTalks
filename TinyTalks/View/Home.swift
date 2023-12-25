@@ -26,7 +26,6 @@ struct Home: View {
                     // ScrollView for the rest of the content
                     ScrollView(.vertical) {
                         VStack {
-                           // Spacer(minLength: 50) // Space for the NewListView
                             CommonUsedView()
                             ActivityView()
                             FoodView()
@@ -37,8 +36,7 @@ struct Home: View {
                 }
             }
         }
-       }
-    
+    }
     //Tasks View
     @ViewBuilder
     func CardsView(_ cards:[CardContent])-> some View{
@@ -47,14 +45,11 @@ struct Home: View {
                 GeometryReader {
                     //Task Row
                     CardRow(card, $0.size)
-                    
                 }.frame(width: 200, height: 200)
                     .background(
                         RoundedRectangle(cornerRadius: 13)
                             .fill(card.Label.isEmpty ? Color.clear : Color("beigCard"))
                     )
-                
-                
             }
         }).frame(maxWidth:.infinity)
             .padding([.leading, .trailing])
@@ -64,48 +59,43 @@ struct Home: View {
     func CardRow(_ card: CardContent, _ size: CGSize) -> some View {
         VStack {
             Spacer() // Pushes content to center vertically
-            
             HStack {
                 Spacer() // Pushes content to center horizontally
                 VStack {
-
-                        Image(card.Image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 100) // Set the frame size for the image
-                            .accessibilityLabel(card.imageLabel) // to read the label of image
-                            .accessibilityAddTraits(.isImage) // to make reader say image
-                            .accessibilityHint(card.Label) // ton read the word after the image
-                   // }
+                    Image(card.Image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100) // Set the frame size for the image
+                        .accessibilityLabel(card.imageLabel) // to read the label of image
+                        .accessibilityAddTraits(.isImage) // to make reader say image
+                        .accessibilityHint(card.Label) // ton read the word after the image
                     if card.constantProperty == "ConjunctionWordsConstant" {
-                        VStack {
-                             Text(NSLocalizedString(card.Label, comment: ""))
-                                 .accessibilityHidden(true)
-                                 .font(.system(size: 34))
-                                 .padding(.bottom)
-                                 .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity, alignment: .center)
-                         }
-                    } else{
                         Text(NSLocalizedString(card.Label, comment: ""))
-                            .accessibilityHidden(true) // to not repeate the word we add it above to come
+                            .accessibilityHidden(true)
+                            .font(.system(size: 40))
+                            .offset(y: -50)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .multilineTextAlignment(.center)
+                    } else {
+                        Text(NSLocalizedString(card.Label, comment: ""))
+                            .accessibilityHidden(true)
                             .font(.system(size: 34))
                             .padding(.bottom)
+                            .fontWeight(.bold)
                     }
-                   
                 }
-                Spacer() // Pushes content to center horizontally
-                
-            }
-            
+                Spacer()
+        }
+        Spacer() // Pushes content to center horizontally
+
             Spacer() // Pushes content to center vertically
         }
         .frame(width: size.width, height: size.height) // Set the frame size of the VStack
         .frame(maxHeight: .infinity)
-        
         .contentShape(.dragPreview, .rect(cornerRadius: 10))
         .draggable(card.id.uuidString){
             VStack{
-
                     Image(card.Image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -122,10 +112,7 @@ struct Home: View {
                     .onAppear(perform: {
                         currentlyDragging = card
                     })
-            }
-        }
-        
-        
+            }}
         .dropDestination(for:String.self){items , location in
             currentlyDragging = nil
             return false
@@ -134,7 +121,6 @@ struct Home: View {
                 withAnimation(.snappy){
                     //implement cross list interaction
                     appendCard(card.status)
-                    
                     switch card.status {
                     case.CommonUsed:
                         replaceItem(cards: &commonUsed , droppingCard: card, status: .CommonUsed)
@@ -146,12 +132,10 @@ struct Home: View {
                         replaceItem(cards: &newList, droppingCard: card, status: .NewList)
                     case .ConjunctionWords:
                         replaceItem(cards: &ConjunctionWords, droppingCard: card, status: .ConjunctionWords)
-
                     }
                 }
             }
         }
-        
     }
     //Drag and drop from one list to another
     func appendCard(_ status: Status) {
@@ -179,10 +163,7 @@ struct Home: View {
                         ConjunctionWords.append(updatedCard)
                         newList.removeAll(where: {$0.id == currentlyDragging.id})
                     }
-                    
-
                 }
-                
             case.NewList:
                 //safe check and inserting into list
            if !newList.contains(where: {$0.id == currentlyDragging.id}) {
@@ -217,7 +198,6 @@ struct Home: View {
     func NewListView()-> some View {
         let rectangleHeight: CGFloat = 300
            let rectangleWidth: CGFloat = UIScreen.main.bounds.width - 20 // 10 points of padding on each side
-
            ZStack {
                // Background rectangle
                Rectangle()
