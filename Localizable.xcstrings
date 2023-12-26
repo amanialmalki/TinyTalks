@@ -260,6 +260,17 @@
         }
       }
     },
+    "Drag the card inside the box" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قم بإفلات البطاقه في الصندوق الاعلى"
+          }
+        }
+      }
+    },
     "Draw" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -292,6 +303,16 @@
         }
       }
     },
+    "Hello!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبا !"
+          }
+        }
+      }
+    },
     "Hiking" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -299,6 +320,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "التسلق"
+          }
+        }
+      }
+    },
+    "Hold on th card to drag it" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أضغط مطولاً على البطاقة لتحريكها"
           }
         }
       }
@@ -434,12 +466,66 @@
         }
       }
     },
+    "Press to let it speak!!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضغط لكي يتحدث !"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخطي"
+          }
+        }
+      }
+    },
     "sound played" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "تم تشغيل الصوت"
+          }
+        }
+      }
+    },
+    "Step 1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة الأولى"
+          }
+        }
+      }
+    },
+    "Step 2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة الثانية"
+          }
+        }
+      }
+    },
+    "Step 3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة الثالثة"
           }
         }
       }
