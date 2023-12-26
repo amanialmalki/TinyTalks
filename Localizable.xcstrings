@@ -189,6 +189,17 @@
         }
       }
     },
+    "Create Your Sentence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انشئ الجملة الخاصة بك"
+          }
+        }
+      }
+    },
     "Cycling" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -77,12 +77,18 @@ struct Home: View {
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity)
                             .multilineTextAlignment(.center)
+                            .lineLimit(nil) // Allow unlimited number of lines
+                            .fixedSize(horizontal: false, vertical: true) // Allow vertical expansion
+                    
                     } else {
                         Text(NSLocalizedString(card.Label, comment: ""))
                             .accessibilityHidden(true)
                             .font(.system(size: 34))
                             .padding(.bottom)
                             .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(nil) // Allow unlimited number of lines
+                            .fixedSize(horizontal: false, vertical: true) // Allow vertical expansion
                     }
                 }
                 Spacer()
@@ -198,54 +204,62 @@ struct Home: View {
     func NewListView()-> some View {
         let rectangleHeight: CGFloat = 300
            let rectangleWidth: CGFloat = UIScreen.main.bounds.width - 20 // 10 points of padding on each side
-           ZStack {
-               // Background rectangle
-               Rectangle()
-                   .frame(width: rectangleWidth, height: rectangleHeight)
-                   .foregroundColor(Color.darkBlue) // Use the Color initializer with the name of your color
-                   .cornerRadius(13)
-                   .padding(.all, 10)
-
-               // ScrollView for the cards
-               ScrollView(.horizontal, showsIndicators: false) {
-                   HStack(spacing: 20) {
-                           CardsView(newList)
-                           .padding(.all)
-                   }
-                   .padding(.horizontal, 10) // This padding should match the outer padding
-               }
-               .frame(width: rectangleWidth, height: rectangleHeight)
-               .clipped()
-               Rectangle()
-                   .frame(width: 200, height: 200)
-                   .foregroundColor(.clear)
-                   .opacity(0.4)
-                   .cornerRadius(13)
-                   .padding(.trailing, 460)
-           }
-        // MARK: - the sound Button START
-        Button {
-           // speakLabelsOfNewListCards()
-            let labelsToPlay = newList.map { $0.Label }
-            // Set the current language code from the device's locale
-            audioPlayerViewModel.currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
-            audioPlayerViewModel.queueAudioFiles(with: labelsToPlay)
-            print("sound played")
+        VStack{
+            Text("Create Your Sentence")
+                .fontWeight(.bold)
+                .font(.system(size: 42))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding([.leading, .trailing])
+                .accessibilityAddTraits(.isHeader)
+            ZStack {
+                // Background rectangle
+                Rectangle()
+                    .frame(width: rectangleWidth, height: rectangleHeight)
+                    .foregroundColor(Color.darkBlue) // Use the Color initializer with the name of your color
+                    .cornerRadius(13)
+                    .padding(.all, 10)
+                
+                // ScrollView for the cards
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        CardsView(newList)
+                            .padding(.all)
+                    }
+                    .padding(.horizontal, 10) // This padding should match the outer padding
+                }
+                .frame(width: rectangleWidth, height: rectangleHeight)
+                .clipped()
+                Rectangle()
+                    .frame(width: 200, height: 200)
+                    .foregroundColor(.clear)
+                    .opacity(0.4)
+                    .cornerRadius(13)
+                    .padding(.trailing, 460)
+            }
             
-        }
-    label:{
-        ZStack{
-            Circle()
-                .frame(width: 80,height:80)
-                .foregroundColor(.lavander)
-            Image(systemName: "speaker.wave.2.fill")
-                .resizable()
-                .frame(width: 44,height:44)
-                .foregroundColor(.beigCard)
-        }.offset(y:-60)
-    }.accessibilityHint("Play the sound of the sentence")
+            // MARK: - the sound Button START
+            Button {
+                // speakLabelsOfNewListCards()
+                let labelsToPlay = newList.map { $0.Label }
+                // Set the current language code from the device's locale
+                audioPlayerViewModel.currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
+                audioPlayerViewModel.queueAudioFiles(with: labelsToPlay)
+                print("sound played")
+            }
+        label:{
+            ZStack{
+                Circle()
+                    .frame(width: 80,height:80)
+                    .foregroundColor(.lavander)
+                Image(systemName: "speaker.wave.2.fill")
+                    .resizable()
+                    .frame(width: 44,height:44)
+                    .foregroundColor(.beigCard)
+            }//.offset(y:-60)
+            .padding(.top, -50)
+        }.accessibilityHint("Play the sound of the sentence")
             // MARK: - the sound Button END
-
+        }
         // Button to show popUpView as a sheet
             .toolbar{
                 Button(action: {
