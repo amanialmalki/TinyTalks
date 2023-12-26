@@ -21,13 +21,27 @@ struct popUpView: View {
                     VStack{
                         Image("Card _description")
                             .resizable()
-                            .frame(width:600, height: 400)
-                            .environment(\.locale, .current)
-                        Text("Drag & Drop and let it speak out loud ")
-                            .fontWeight(.regular)
-                            .font(.largeTitle)
-                            .accessibilityLabel("Drag & Drop and let it speak out loud")
+                            .frame(width:550, height: 300)
+                            .cornerRadius(13)
+                            //.environment(\.locale, .current)
+//                    ZStack {
+//                        // Background rectangle
+//                        Rectangle()
+//                            .frame(width: 400, height: 400)
+//                            .foregroundColor(Color.darkBlue) // Use the Color initializer with the name of your color
+//                            .cornerRadius(13)
+//                            .padding(.all, 10)
+//
+//                            .padding(.horizontal, 10) // This padding should match the outer padding
+                        }
+                    Text("Drag & Drop and let it speak out loud ")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .accessibilityLabel("Drag & Drop and let it speak out loud")
+                        .offset(y:200)
                     }
+                       
+                    //}
 
                     
                 }
@@ -39,7 +53,7 @@ struct popUpView: View {
         }
         
     }
-    }
+
 
 #Preview {
     popUpView()
