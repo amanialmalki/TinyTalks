@@ -50,6 +50,49 @@ struct Home: View {
                         RoundedRectangle(cornerRadius: 13)
                             .fill(card.Label.isEmpty ? Color.clear : Color("beigCard"))
                     )
+                    .draggable(card.id.uuidString){
+                        VStack{
+                                Image(card.Image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 150, height: 150) // Set the frame size for the image
+                                    .padding(.top)
+                                    .accessibilityHidden(true) // to not repeate the word we add it above to come
+                                Spacer()
+                            //}
+                            Text(NSLocalizedString(card.Label, comment: ""))
+                                .accessibilityHidden(true) // to not repeate the word we add it above to come
+                                .font(.system(size: 34))
+                                .padding(.bottom)
+                                .contentShape(.dragPreview, .rect(cornerRadius: 10))
+                                .onAppear(perform: {
+                                    currentlyDragging = card
+                                })
+                        }}
+                    .dropDestination(for:String.self){items , location in
+                        currentlyDragging = nil
+                        return false
+                    } isTargeted: { status in
+                        if let currentlyDragging, status, currentlyDragging.id != card.id{
+                            withAnimation(.snappy){
+                                //implement cross list interaction
+                                appendCard(card.status)
+                                switch card.status {
+                                case.CommonUsed:
+                                    replaceItem(cards: &commonUsed , droppingCard: card, status: .CommonUsed)
+                                case.Activity:
+                                    replaceItem(cards: &activity , droppingCard: card, status: .Activity)
+                                case.Food:
+                                    replaceItem(cards: &food, droppingCard: card, status: .Food)
+                                case.NewList:
+                                    replaceItem(cards: &newList, droppingCard: card, status: .NewList)
+                                case .ConjunctionWords:
+                                    replaceItem(cards: &ConjunctionWords, droppingCard: card, status: .ConjunctionWords)
+                                }
+                            }
+                        }
+                    }
+                
             }
         }).frame(maxWidth:.infinity)
             .padding([.leading, .trailing])
@@ -100,48 +143,48 @@ struct Home: View {
         .frame(width: size.width, height: size.height) // Set the frame size of the VStack
         .frame(maxHeight: .infinity)
         .contentShape(.dragPreview, .rect(cornerRadius: 10))
-        .draggable(card.id.uuidString){
-            VStack{
-                    Image(card.Image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 150, height: 150) // Set the frame size for the image
-                        .padding(.top)
-                        .accessibilityHidden(true) // to not repeate the word we add it above to come
-                    Spacer()
-                //}
-                Text(NSLocalizedString(card.Label, comment: ""))
-                    .accessibilityHidden(true) // to not repeate the word we add it above to come
-                    .font(.system(size: 34))
-                    .padding(.bottom)
-                    .contentShape(.dragPreview, .rect(cornerRadius: 10))
-                    .onAppear(perform: {
-                        currentlyDragging = card
-                    })
-            }}
-        .dropDestination(for:String.self){items , location in
-            currentlyDragging = nil
-            return false
-        } isTargeted: { status in
-            if let currentlyDragging, status, currentlyDragging.id != card.id{
-                withAnimation(.snappy){
-                    //implement cross list interaction
-                    appendCard(card.status)
-                    switch card.status {
-                    case.CommonUsed:
-                        replaceItem(cards: &commonUsed , droppingCard: card, status: .CommonUsed)
-                    case.Activity:
-                        replaceItem(cards: &activity , droppingCard: card, status: .Activity)
-                    case.Food:
-                        replaceItem(cards: &food, droppingCard: card, status: .Food)
-                    case.NewList:
-                        replaceItem(cards: &newList, droppingCard: card, status: .NewList)
-                    case .ConjunctionWords:
-                        replaceItem(cards: &ConjunctionWords, droppingCard: card, status: .ConjunctionWords)
-                    }
-                }
-            }
-        }
+//        .draggable(card.id.uuidString){
+//            VStack{
+//                    Image(card.Image)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 150, height: 150) // Set the frame size for the image
+//                        .padding(.top)
+//                        .accessibilityHidden(true) // to not repeate the word we add it above to come
+//                    Spacer()
+//                //}
+//                Text(NSLocalizedString(card.Label, comment: ""))
+//                    .accessibilityHidden(true) // to not repeate the word we add it above to come
+//                    .font(.system(size: 34))
+//                    .padding(.bottom)
+//                    .contentShape(.dragPreview, .rect(cornerRadius: 10))
+//                    .onAppear(perform: {
+//                        currentlyDragging = card
+//                    })
+//            }}
+//        .dropDestination(for:String.self){items , location in
+//            currentlyDragging = nil
+//            return false
+//        } isTargeted: { status in
+//            if let currentlyDragging, status, currentlyDragging.id != card.id{
+//                withAnimation(.snappy){
+//                    //implement cross list interaction
+//                    appendCard(card.status)
+//                    switch card.status {
+//                    case.CommonUsed:
+//                        replaceItem(cards: &commonUsed , droppingCard: card, status: .CommonUsed)
+//                    case.Activity:
+//                        replaceItem(cards: &activity , droppingCard: card, status: .Activity)
+//                    case.Food:
+//                        replaceItem(cards: &food, droppingCard: card, status: .Food)
+//                    case.NewList:
+//                        replaceItem(cards: &newList, droppingCard: card, status: .NewList)
+//                    case .ConjunctionWords:
+//                        replaceItem(cards: &ConjunctionWords, droppingCard: card, status: .ConjunctionWords)
+//                    }
+//                }
+//            }
+//        }
     }
     //Drag and drop from one list to another
     func appendCard(_ status: Status) {
