@@ -203,7 +203,7 @@ struct Home: View {
     @ViewBuilder
     func NewListView()-> some View {
         let rectangleHeight: CGFloat = 300
-           let rectangleWidth: CGFloat = UIScreen.main.bounds.width - 20 // 10 points of padding on each side
+        let rectangleWidth: CGFloat = UIScreen.main.bounds.width - 20 // 10 points of padding on each side
         VStack{
             Text("Create Your Sentence")
                 .fontWeight(.bold)
@@ -236,31 +236,32 @@ struct Home: View {
                     .cornerRadius(13)
                     .padding(.trailing, 460)
             }
-            
-            // MARK: - the sound Button START
-            Button {
-                // speakLabelsOfNewListCards()
-                let labelsToPlay = newList.map { $0.Label }
-                // Set the current language code from the device's locale
-                audioPlayerViewModel.currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
-                audioPlayerViewModel.queueAudioFiles(with: labelsToPlay)
-                print("sound played")
+                
+                // MARK: - the sound Button START
+                Button {
+                    // speakLabelsOfNewListCards()
+                    let labelsToPlay = newList.map { $0.Label }
+                    // Set the current language code from the device's locale
+                    audioPlayerViewModel.currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
+                    audioPlayerViewModel.queueAudioFiles(with: labelsToPlay)
+                    print("sound played")
+                }
+            label:{
+                ZStack {
+                               Circle()
+                                   .frame(width: 80, height: 80)
+                                   .foregroundColor(Color("lavander")) // Use the Color initializer with the name of your color
+                               Image(systemName: "speaker.wave.2.fill")
+                                   .resizable()
+                                   .frame(width: 44, height: 44)
+                                   .foregroundColor(Color("beigCard")) // Use the Color initializer with the name of your color
+                           }
+                       }
+                       .padding(.top, -60) // Adjust this padding as needed
+                       .accessibilityHint("Play the sound of the sentence")
+                // MARK: - the sound Button END
             }
-        label:{
-            ZStack{
-                Circle()
-                    .frame(width: 80,height:80)
-                    .foregroundColor(.lavander)
-                Image(systemName: "speaker.wave.2.fill")
-                    .resizable()
-                    .frame(width: 44,height:44)
-                    .foregroundColor(.beigCard)
-            }//.offset(y:-60)
-            .padding(.top, -50)
-        }.accessibilityHint("Play the sound of the sentence")
-            // MARK: - the sound Button END
-        }
-        // Button to show popUpView as a sheet
+            // Button to show popUpView as a sheet
             .toolbar{
                 Button(action: {
                     isPresentingPopUpSheet.toggle()
@@ -278,18 +279,18 @@ struct Home: View {
                     popUpView()
                 }
             }
-       // }/*.navigationTitle("New List")*/
-                .dropDestination(for: String.self) { items, location in
-                    //Appending to the last of Current List, if the item is not present on that list
-                    withAnimation(.snappy) {
-                    }
-                    return true
-                } isTargeted: { _ in
-                    
+            // }/*.navigationTitle("New List")*/
+            .dropDestination(for: String.self) { items, location in
+                //Appending to the last of Current List, if the item is not present on that list
+                withAnimation(.snappy) {
                 }
-        
+                return true
+            } isTargeted: { _ in
+                
             }
-        
+            
+        }
+    
     //CommonUsed View
     @ViewBuilder
     func CommonUsedView()-> some View {
