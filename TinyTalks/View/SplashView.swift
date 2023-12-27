@@ -17,7 +17,8 @@ struct SplashView: View {
         ZStack {
             if self.isActive {
                 if currentPage > totalPages{
-                    Home()
+                   // Home()
+                    SwiftUIView()
                 }
                 else{
                     Walkthrough()
