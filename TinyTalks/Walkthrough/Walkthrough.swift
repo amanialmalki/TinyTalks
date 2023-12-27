@@ -18,7 +18,7 @@ struct Walkthrough: View {
             }
             
             if currentPage == 2 {
-                ScreenView(baseImageName: "drop", title: "Step 2", detail: "Drag the card inside the box", bgColor: Color("Back"))
+                ScreenView(baseImageName: "drop", title: "Step 2", detail: "Drop the card inside the box", bgColor: Color("Back"))
                     .transition(.scale)
             }
             
