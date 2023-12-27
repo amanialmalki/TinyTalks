@@ -21,10 +21,11 @@ class NotificationManager: ObservableObject {
         content.title = NSLocalizedString("Take a Break", comment: " ")
                 content.body = NSLocalizedString("You've been using the app for a while. Time to rest your eyes and stretch your legs.", comment: " ")
                 content.sound = UNNotificationSound.default
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1200, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
                
         let request = UNNotificationRequest(identifier: restNotificationIdentifier, content: content, trigger: trigger)
         print("Scheduling notification in 60 seconds")
+        
            UNUserNotificationCenter.current().add(request) { error in
                if let error = error {
                    print("Error scheduling notification: \(error)")

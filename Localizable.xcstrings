@@ -260,17 +260,6 @@
         }
       }
     },
-    "Drag the card inside the box" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "قم بإفلات البطاقه في الصندوق الاعلى"
-          }
-        }
-      }
-    },
     "Draw" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -278,6 +267,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "الرسم"
+          }
+        }
+      }
+    },
+    "Drop the card inside the box" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قم بإفلات البطاقه في الصندوق الاعلى"
           }
         }
       }
