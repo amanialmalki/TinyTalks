@@ -100,6 +100,12 @@
 		94E0D1872B343CE300FD2213 /* No_ar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E0D1712B343CE300FD2213 /* No_ar.mp3 */; };
 		94E0D1882B343CE300FD2213 /* Cookies_ar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E0D1722B343CE300FD2213 /* Cookies_ar.mp3 */; };
 		94E0D18A2B343E3600FD2213 /* Want_ar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E0D1892B343E3600FD2213 /* Want_ar.mp3 */; };
+		94E4ACC12B6E7BFE006B4B09 /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACBB2B6E7BFE006B4B09 /* NewListView.swift */; };
+		94E4ACC22B6E7BFE006B4B09 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACBC2B6E7BFE006B4B09 /* FoodView.swift */; };
+		94E4ACC32B6E7BFE006B4B09 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACBD2B6E7BFE006B4B09 /* CardsView.swift */; };
+		94E4ACC42B6E7BFE006B4B09 /* CommonUsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACBE2B6E7BFE006B4B09 /* CommonUsedView.swift */; };
+		94E4ACC52B6E7BFE006B4B09 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACBF2B6E7BFE006B4B09 /* ActivityView.swift */; };
+		94E4ACC62B6E7BFE006B4B09 /* ConjunctionWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E4ACC02B6E7BFE006B4B09 /* ConjunctionWordsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +204,12 @@
 		94E0D1712B343CE300FD2213 /* No_ar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = No_ar.mp3; sourceTree = "<group>"; };
 		94E0D1722B343CE300FD2213 /* Cookies_ar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cookies_ar.mp3; sourceTree = "<group>"; };
 		94E0D1892B343E3600FD2213 /* Want_ar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Want_ar.mp3; sourceTree = "<group>"; };
+		94E4ACBB2B6E7BFE006B4B09 /* NewListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
+		94E4ACBC2B6E7BFE006B4B09 /* FoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		94E4ACBD2B6E7BFE006B4B09 /* CardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		94E4ACBE2B6E7BFE006B4B09 /* CommonUsedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUsedView.swift; sourceTree = "<group>"; };
+		94E4ACBF2B6E7BFE006B4B09 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		94E4ACC02B6E7BFE006B4B09 /* ConjunctionWordsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConjunctionWordsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +226,8 @@
 		680991B32B308943005E5615 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				94E0D1222B34342400FD2213 /* AudioPlayerViewModel.swift */,
 				9426B3AF2B333DAC00BD7298 /* AppDelegate.swift */,
+				681958E72B30C4B900256327 /* CardContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,10 +235,10 @@
 		680991B42B308951005E5615 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94E4ACB92B6E7BA2006B4B09 /* ViewBuilder */,
 				9426B3B12B334A1900BD7298 /* popUpView.swift */,
 				680991B72B308AC8005E5615 /* Home.swift */,
 				9410A3812B331FA80025A798 /* SplashView.swift */,
-				9410A3832B3325A50025A798 /* NotificationManager.swift */,
 				944D80F42B3BFC8100AC09AE /* SwiftUIView.swift */,
 			);
 			path = View;
@@ -252,9 +264,10 @@
 		68BF94912B2F969A0038CA67 /* TinyTalks */ = {
 			isa = PBXGroup;
 			children = (
+				94E4ACB82B6E7B99006B4B09 /* ViewModel */,
+				94E4ACB72B6E7B8C006B4B09 /* DataService */,
 				944D80F12B3B710A00AC09AE /* Walkthrough */,
 				94E0D1242B34343000FD2213 /* Sounds */,
-				68C576D82B30C37500F86AFB /* Cards */,
 				680991B42B308951005E5615 /* View */,
 				680991B32B308943005E5615 /* Model */,
 				68BF94922B2F969A0038CA67 /* TinyTalksApp.swift */,
@@ -272,15 +285,6 @@
 				68BF949A2B2F969B0038CA67 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		68C576D82B30C37500F86AFB /* Cards */ = {
-			isa = PBXGroup;
-			children = (
-				681958E72B30C4B900256327 /* CardContent.swift */,
-				944028FD2B31F3BC00D8F318 /* SampleData.swift */,
-			);
-			path = Cards;
 			sourceTree = "<group>";
 		};
 		944D80F12B3B710A00AC09AE /* Walkthrough */ = {
@@ -392,6 +396,36 @@
 			path = Arb;
 			sourceTree = "<group>";
 		};
+		94E4ACB72B6E7B8C006B4B09 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				944028FD2B31F3BC00D8F318 /* SampleData.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		94E4ACB82B6E7B99006B4B09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94E0D1222B34342400FD2213 /* AudioPlayerViewModel.swift */,
+				9410A3832B3325A50025A798 /* NotificationManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94E4ACB92B6E7BA2006B4B09 /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				94E4ACBF2B6E7BFE006B4B09 /* ActivityView.swift */,
+				94E4ACBD2B6E7BFE006B4B09 /* CardsView.swift */,
+				94E4ACBE2B6E7BFE006B4B09 /* CommonUsedView.swift */,
+				94E4ACC02B6E7BFE006B4B09 /* ConjunctionWordsView.swift */,
+				94E4ACBC2B6E7BFE006B4B09 /* FoodView.swift */,
+				94E4ACBB2B6E7BFE006B4B09 /* NewListView.swift */,
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,7 +454,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					68BF948E2B2F969A0038CA67 = {
 						CreatedOnToolsVersion = 15.1;
@@ -543,15 +577,21 @@
 			files = (
 				9426B3B02B333DAC00BD7298 /* AppDelegate.swift in Sources */,
 				68BF94952B2F969A0038CA67 /* ContentView.swift in Sources */,
+				94E4ACC22B6E7BFE006B4B09 /* FoodView.swift in Sources */,
 				944D80F52B3BFC8100AC09AE /* SwiftUIView.swift in Sources */,
+				94E4ACC42B6E7BFE006B4B09 /* CommonUsedView.swift in Sources */,
 				681958E82B30C4B900256327 /* CardContent.swift in Sources */,
 				680991B82B308AC8005E5615 /* Home.swift in Sources */,
+				94E4ACC32B6E7BFE006B4B09 /* CardsView.swift in Sources */,
 				9426B3B22B334A1900BD7298 /* popUpView.swift in Sources */,
+				94E4ACC62B6E7BFE006B4B09 /* ConjunctionWordsView.swift in Sources */,
+				94E4ACC52B6E7BFE006B4B09 /* ActivityView.swift in Sources */,
 				944D80F32B3B711E00AC09AE /* Walkthrough.swift in Sources */,
 				944028FE2B31F3BC00D8F318 /* SampleData.swift in Sources */,
 				94E0D1232B34342400FD2213 /* AudioPlayerViewModel.swift in Sources */,
 				9410A3842B3325A50025A798 /* NotificationManager.swift in Sources */,
 				68BF94932B2F969A0038CA67 /* TinyTalksApp.swift in Sources */,
+				94E4ACC12B6E7BFE006B4B09 /* NewListView.swift in Sources */,
 				9410A3822B331FA80025A798 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +633,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -654,6 +695,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -681,6 +723,7 @@
 				CODE_SIGN_ENTITLEMENTS = TinyTalks/TinyTalks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TinyTalks/Preview Content\"";
 				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -704,10 +747,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = afrahADA.TinyTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -719,6 +763,7 @@
 				CODE_SIGN_ENTITLEMENTS = TinyTalks/TinyTalks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TinyTalks/Preview Content\"";
 				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -742,10 +787,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amaniADA.TinyTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
